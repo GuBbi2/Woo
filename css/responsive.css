@@ -131,14 +131,23 @@
 
     .form-control,
     textarea {
+        width: 100%;
+    }
 
-        margin: 0 auto;
+    .send-button{
+        position: absolute;
+        width: 100%;
+        left: 0;
     }
 
     .name,
     .email,
     textarea {
         width: 280px;
+    }
+    .contact-wrapper{
+        left: 0;
+        margin: 0;
     }
 
     .direct-contact-container {
@@ -173,7 +182,7 @@
     }
 
     .logo .open{
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .logo .hrs{
