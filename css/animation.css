@@ -1,0 +1,400 @@
+@keyframes fall {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(200vh);
+    }
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--button-clip-1);
+    }
+
+    2%,
+    8% {
+        clip-path: var(--button-clip-2);
+        transform: translate(calc(var(--button-shimmy-distance) * -1%), 0);
+    }
+
+    6% {
+        clip-path: var(--button-clip-2);
+        transform: translate(calc(var(--button-shimmy-distance) * 1%), 0);
+    }
+
+    9% {
+        clip-path: var(--button-clip-2);
+        transform: translate(0, 0);
+    }
+
+    10% {
+        clip-path: var(--button-clip-3);
+        transform: translate(calc(var(--button-shimmy-distance) * 1%), 0);
+    }
+
+    13% {
+        clip-path: var(--button-clip-3);
+        transform: translate(0, 0);
+    }
+
+    14%,
+    21% {
+        clip-path: var(--button-clip-4);
+        transform: translate(calc(var(--button-shimmy-distance) * 1%), 0);
+    }
+
+    25% {
+        clip-path: var(--button-clip-5);
+        transform: translate(calc(var(--button-shimmy-distance) * 1%), 0);
+    }
+
+    30% {
+        clip-path: var(--button-clip-5);
+        transform: translate(calc(var(--button-shimmy-distance) * -1%), 0);
+    }
+
+    35%,
+    45% {
+        clip-path: var(--button-clip-6);
+        transform: translate(calc(var(--button-shimmy-distance) * -1%));
+    }
+
+    40% {
+        clip-path: var(--button-clip-6);
+        transform: translate(calc(var(--button-shimmy-distance) * 1%));
+    }
+
+    50% {
+        clip-path: var(--button-clip-6);
+        transform: translate(0, 0);
+    }
+
+    55% {
+        clip-path: var(--button-clip-7);
+        transform: translate(calc(var(--button-shimmy-distance) * 1%), 0);
+    }
+
+    60% {
+        clip-path: var(--button-clip-7);
+        transform: translate(0, 0);
+    }
+
+    31%,
+    61%,
+    100% {
+        clip-path: var(--button-clip-4);
+    }
+}
+
+
+@keyframes buzz {
+    70% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes blink {
+    40% {
+        opacity: 1;
+    }
+
+    42% {
+        opacity: 0.8;
+    }
+
+    43% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0.2;
+    }
+
+    46% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes h1glitched {
+    0% {
+        transform: skew(-20deg);
+        left: -4px;
+    }
+
+    10% {
+        transform: skew(-20deg);
+        left: -4px;
+    }
+
+    11% {
+        transform: skew(0deg);
+        left: 2px;
+    }
+
+    50% {
+        transform: skew(0deg);
+    }
+
+    51% {
+        transform: skew(10deg);
+    }
+
+    59% {
+        transform: skew(10deg);
+    }
+
+    60% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+
+@keyframes h1beforeglitched {
+    0% {
+        transform: skew(-20deg);
+        left: -4px;
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    10% {
+        transform: skew(-20deg);
+        left: -4px;
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    11% {
+        transform: skew(0deg);
+        left: 2px;
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    50% {
+        transform: skew(0deg);
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    51% {
+        transform: skew(0deg);
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 40% 5px, calc(40% - 30px) 0px, calc(40% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(40% + 29px) 1px, calc(40% - 29px) 1px, calc(40% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    59% {
+        transform: skew(0deg);
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 40% 5px, calc(40% - 30px) 0px, calc(40% + 30px) 0px, calc(45% - 15px) 5px, 100% 5px, 100% 6px, calc(45% - 14px) 6px, calc(40% + 29px) 1px, calc(40% - 29px) 1px, calc(40% + 1px) 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    60% {
+        transform: skew(0deg);
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+
+    100% {
+        transform: skew(0deg);
+        clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+    }
+}
+
+
+@keyframes hxafter {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes h2beforeglitched {
+    0% {
+        transform: scaleY(1);
+    }
+
+    10% {
+        transform: scaleY(1);
+    }
+
+    11% {
+        transform: scaleY(-1);
+    }
+
+    50% {
+        transform: scaleY(-1);
+    }
+
+    51% {
+        transform: scaleY(1);
+    }
+
+    59% {
+        transform: scaleY(1);
+    }
+
+    60% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+
+@keyframes scannedh {
+    0% {
+        top: -27px;
+    }
+
+    50% {}
+
+    51% {}
+
+    100% {
+        top: calc(100% + 12px);
+    }
+}
+
+
+@keyframes scannedv {
+    0% {
+        left: 0px;
+    }
+
+    50% {}
+
+    51% {}
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes buttonhoverafter {
+    0% {
+        right: 45px;
+    }
+
+    10% {
+        right: 45px;
+    }
+
+    11% {
+        right: 35px;
+    }
+
+    20% {
+        transform: skew(0deg);
+    }
+
+    21% {
+        transform: skew(-10deg);
+    }
+
+    40% {
+        transform: skew(-10deg);
+    }
+
+    41% {
+        transform: skew(0deg);
+    }
+
+    49% {
+        right: 35px;
+    }
+
+    50% {
+        right: 55px;
+    }
+
+    60% {
+        right: 55px;
+    }
+
+    61% {
+        right: 35px;
+    }
+
+    70% {
+        transform: skew(0deg);
+    }
+
+    71% {
+        transform: skew(10deg);
+    }
+
+    80% {
+        transform: skew(10deg);
+    }
+
+    81% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        right: 35px;
+    }
+}
+
+@keyframes streak {
+    100% {
+        d: path("m270.81 171.77 58.288 94.061h24.17l-68.056-94.061zm21.698 0 64.579 94.061h6.1955l-68.058-94.061z"
+            );
+    }
+}
+
+@keyframes rumble {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-transform: translate(1px, 0px) rotate(-0.3deg);
+    }
+
+    50% {
+        -webkit-transform: translate(0px, -1px) rotate(0deg);
+    }
+
+    75% {
+        -webkit-transform: translate(-1px, 0px) rotate(0.3deg);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 1px) rotate(0deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes car_move {
+    100%{
+        left: 120%;
+    }
+}
+
+@keyframes streamline {
+    100% {
+        stroke-dashoffset: 2000px;
+    }
+}

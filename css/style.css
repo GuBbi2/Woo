@@ -1,0 +1,1075 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: BlenderProBook;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/BlenderProBook.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Oxanium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Cyberpunk;
+    src: url(../fonts/Cyberpunk.otf) format('opentype');
+}
+
+
+@font-face {
+    font-family: 'neontubes';
+    src: url('https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot');
+    src: url('https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix') format('embedded-opentype'), url('https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2') format('woff2'), url('https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff') format('woff'), url('https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --glitched-duration: 0.9s;
+    --glitched-long-duration: 3s;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    background-color: #FCEE09;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff003c;
+    border-bottom: 2px solid #ff003c;
+    border-right: 2px solid #ff003c;
+    transition: background var(--glitched-duration);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fcc738;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+::-webkit-resizer {
+    display: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: #050A0E;
+    padding-bottom: 100px;
+}
+
+body.on {
+    transition: all .5s;
+    background-color: #FCEE09;
+}
+
+.wrap {
+    max-width: 1920px;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #050A0E;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.hamburger {
+    width: 40px;
+    display: none;
+    position: absolute;
+}
+
+.hamburger span {
+    display: block;
+    height: 6px;
+    background-color: #FCEE09;
+}
+
+.hamburger span+span {
+    margin-top: 6px;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 105px;
+    background-color: #ccc;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 5px 10px #ccc;
+
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mobile-nav ul li {
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.mobile-nav ul li:hover {
+    opacity: 70%;
+    background-color: #fff;
+}
+
+a,
+span {
+    font-family: "BlenderProBook";
+}
+
+#full_page section {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.cyber-razor-top {
+    margin-top: 30px;
+    position: relative;
+}
+
+.cyber-razor-bottom {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.cyber-razor-top:before {
+    content: " ";
+    background-color: #050A0E;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920px" height="40px"><path d="M1827.156,15.021 L1827.129,14.994 L1833.785,14.994 L1833.759,15.021 L1827.156,15.021 ZM1824.965,24.036 L1835.969,24.036 L1830.461,18.558 L1833.759,15.021 L1920.000,15.021 L1920.000,39.075 L0.001,39.075 L0.001,15.013 L271.884,15.013 L279.537,6.930 L292.458,6.930 L308.426,24.036 L308.449,24.013 L308.467,24.036 L317.638,15.021 L463.241,15.021 L466.539,18.558 L461.031,24.036 L472.035,24.036 L466.539,18.558 L469.844,15.021 L551.557,15.021 L556.251,10.578 L565.497,1.358 L571.663,7.066 L602.910,7.055 L607.919,7.055 L620.578,19.983 L654.209,19.983 L661.448,12.957 L735.709,12.995 L741.480,18.554 L750.129,9.930 L753.020,12.995 L918.181,12.957 L930.942,0.066 L954.993,24.036 L955.000,24.024 L955.012,24.036 L964.064,15.013 L967.906,15.013 L970.005,17.106 L966.670,20.419 L973.326,20.419 L970.005,17.106 L972.067,15.055 L1050.000,15.023 L1050.000,15.013 L1064.030,15.017 L1072.000,15.013 L1072.000,15.019 L1225.933,15.055 L1227.994,17.106 L1224.674,20.419 L1231.331,20.419 L1227.994,17.106 L1230.094,15.013 L1233.936,15.013 L1242.989,24.036 L1243.000,24.024 L1243.007,24.036 L1267.058,0.066 L1279.819,12.957 L1368.980,12.995 L1371.871,9.930 L1380.520,18.554 L1386.290,13.057 L1635.552,13.019 L1642.790,19.983 L1676.422,19.983 L1689.080,6.992 L1725.337,7.003 L1731.502,1.358 L1740.749,10.578 L1745.443,15.021 L1827.156,15.021 L1830.461,18.558 L1824.965,24.036 ZM341.624,18.857 L339.889,18.857 L339.889,24.036 L341.624,24.036 L341.624,18.857 ZM344.248,18.857 L342.518,18.857 L342.518,24.036 L344.248,24.036 L344.248,18.857 ZM356.370,18.857 L354.640,18.857 L354.640,24.036 L356.370,24.036 L356.370,18.857 ZM377.168,18.857 L371.973,18.857 L371.973,24.036 L377.168,24.036 L377.168,18.857 ZM584.675,12.348 L582.941,12.348 L582.941,14.073 L584.675,14.073 L584.675,12.348 ZM591.316,12.348 L589.582,12.348 L589.582,17.526 L591.316,17.526 L591.316,12.348 ZM604.751,12.348 L603.017,12.348 L603.017,14.073 L604.751,14.073 L604.751,12.348 ZM604.751,15.802 L603.017,15.802 L603.017,17.526 L604.751,17.526 L604.751,15.802 ZM1693.983,12.348 L1692.249,12.348 L1692.249,14.073 L1693.983,14.073 L1693.983,12.348 ZM1693.983,15.802 L1692.249,15.802 L1692.249,17.526 L1693.983,17.526 L1693.983,15.802 ZM1707.418,12.348 L1705.683,12.348 L1705.683,17.526 L1707.418,17.526 L1707.418,12.348 ZM1714.059,12.348 L1712.324,12.348 L1712.324,14.073 L1714.059,14.073 L1714.059,12.348 ZM463.214,14.994 L469.871,14.994 L469.844,15.021 L463.241,15.021 L463.214,14.994 ZM754.222,5.976 L750.129,9.930 L746.025,5.976 L754.222,5.976 ZM1375.975,5.976 L1371.871,9.930 L1367.778,5.976 L1375.975,5.976 Z"/></svg>');
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-position: top;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920px" height="40px"><path d="M1827.156,15.021 L1827.129,14.994 L1833.785,14.994 L1833.759,15.021 L1827.156,15.021 ZM1824.965,24.036 L1835.969,24.036 L1830.461,18.558 L1833.759,15.021 L1920.000,15.021 L1920.000,39.075 L0.001,39.075 L0.001,15.013 L271.884,15.013 L279.537,6.930 L292.458,6.930 L308.426,24.036 L308.449,24.013 L308.467,24.036 L317.638,15.021 L463.241,15.021 L466.539,18.558 L461.031,24.036 L472.035,24.036 L466.539,18.558 L469.844,15.021 L551.557,15.021 L556.251,10.578 L565.497,1.358 L571.663,7.066 L602.910,7.055 L607.919,7.055 L620.578,19.983 L654.209,19.983 L661.448,12.957 L735.709,12.995 L741.480,18.554 L750.129,9.930 L753.020,12.995 L918.181,12.957 L930.942,0.066 L954.993,24.036 L955.000,24.024 L955.012,24.036 L964.064,15.013 L967.906,15.013 L970.005,17.106 L966.670,20.419 L973.326,20.419 L970.005,17.106 L972.067,15.055 L1050.000,15.023 L1050.000,15.013 L1064.030,15.017 L1072.000,15.013 L1072.000,15.019 L1225.933,15.055 L1227.994,17.106 L1224.674,20.419 L1231.331,20.419 L1227.994,17.106 L1230.094,15.013 L1233.936,15.013 L1242.989,24.036 L1243.000,24.024 L1243.007,24.036 L1267.058,0.066 L1279.819,12.957 L1368.980,12.995 L1371.871,9.930 L1380.520,18.554 L1386.290,13.057 L1635.552,13.019 L1642.790,19.983 L1676.422,19.983 L1689.080,6.992 L1725.337,7.003 L1731.502,1.358 L1740.749,10.578 L1745.443,15.021 L1827.156,15.021 L1830.461,18.558 L1824.965,24.036 ZM341.624,18.857 L339.889,18.857 L339.889,24.036 L341.624,24.036 L341.624,18.857 ZM344.248,18.857 L342.518,18.857 L342.518,24.036 L344.248,24.036 L344.248,18.857 ZM356.370,18.857 L354.640,18.857 L354.640,24.036 L356.370,24.036 L356.370,18.857 ZM377.168,18.857 L371.973,18.857 L371.973,24.036 L377.168,24.036 L377.168,18.857 ZM584.675,12.348 L582.941,12.348 L582.941,14.073 L584.675,14.073 L584.675,12.348 ZM591.316,12.348 L589.582,12.348 L589.582,17.526 L591.316,17.526 L591.316,12.348 ZM604.751,12.348 L603.017,12.348 L603.017,14.073 L604.751,14.073 L604.751,12.348 ZM604.751,15.802 L603.017,15.802 L603.017,17.526 L604.751,17.526 L604.751,15.802 ZM1693.983,12.348 L1692.249,12.348 L1692.249,14.073 L1693.983,14.073 L1693.983,12.348 ZM1693.983,15.802 L1692.249,15.802 L1692.249,17.526 L1693.983,17.526 L1693.983,15.802 ZM1707.418,12.348 L1705.683,12.348 L1705.683,17.526 L1707.418,17.526 L1707.418,12.348 ZM1714.059,12.348 L1712.324,12.348 L1712.324,14.073 L1714.059,14.073 L1714.059,12.348 ZM463.214,14.994 L469.871,14.994 L469.844,15.021 L463.241,15.021 L463.214,14.994 ZM754.222,5.976 L750.129,9.930 L746.025,5.976 L754.222,5.976 ZM1375.975,5.976 L1371.871,9.930 L1367.778,5.976 L1375.975,5.976 Z"/></svg>');
+    mask-repeat: repeat-x;
+    mask-position: top;
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+}
+
+.cyber-razor-bottom:after {
+    content: " ";
+    background-color: #050A0E;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920px" height="39px"><path d="M1877.759,23.791 L1874.461,20.504 L1879.969,15.027 L1868.965,15.027 L1874.461,20.504 L1871.156,23.791 L1789.442,23.791 L1784.749,28.484 L1775.502,37.704 L1769.337,31.559 L1738.089,31.695 L1733.080,31.695 L1720.422,19.079 L1686.790,19.079 L1679.552,26.293 L1386.290,26.255 L1380.520,20.508 L1371.871,29.132 L1368.980,26.255 L1203.819,26.293 L1191.058,38.996 L1167.007,15.027 L1167.000,15.038 L1166.989,15.027 L1157.936,24.049 L1154.094,24.049 L1151.994,21.956 L1155.330,18.643 L1148.674,18.643 L1151.994,21.956 L1149.933,24.007 L1072.000,24.040 L1072.000,24.049 L1061.000,24.044 L1050.000,24.049 L1050.000,24.040 L972.067,24.007 L970.005,21.956 L973.326,18.643 L966.670,18.643 L970.005,21.956 L967.906,24.049 L964.064,24.049 L955.012,15.027 L955.000,15.038 L954.993,15.027 L930.942,38.996 L918.181,26.293 L818.020,26.255 L815.129,29.132 L806.480,20.508 L800.710,26.255 L661.448,26.293 L654.209,19.079 L620.578,19.079 L607.919,31.695 L602.910,31.695 L571.663,31.559 L565.497,37.704 L556.251,28.484 L551.557,23.791 L469.844,23.791 L466.539,20.504 L472.035,15.027 L461.031,15.027 L466.539,20.504 L463.241,23.791 L204.638,23.791 L195.467,15.027 L195.449,15.049 L195.426,15.027 L179.458,31.695 L166.537,31.695 L158.884,24.049 L0.001,24.049 L0.001,-0.012 L1919.998,-0.012 L1919.998,24.049 L1877.759,23.791 ZM228.624,15.027 L226.889,15.027 L226.889,20.205 L228.624,20.205 L228.624,15.027 ZM231.248,15.027 L229.518,15.027 L229.518,20.205 L231.248,20.205 L231.248,15.027 ZM243.370,15.027 L241.640,15.027 L241.640,20.205 L243.370,20.205 L243.370,15.027 ZM264.168,15.027 L258.973,15.027 L258.973,20.205 L264.168,20.205 L264.168,15.027 ZM584.675,24.989 L582.941,24.989 L582.941,26.714 L584.675,26.714 L584.675,24.989 ZM591.316,21.536 L589.582,21.536 L589.582,26.714 L591.316,26.714 L591.316,21.536 ZM604.751,21.536 L603.017,21.536 L603.017,23.260 L604.751,23.260 L604.751,21.536 ZM604.751,24.989 L603.017,24.989 L603.017,26.714 L604.751,26.714 L604.751,24.989 ZM1737.983,21.536 L1736.249,21.536 L1736.249,23.260 L1737.983,23.260 L1737.983,21.536 ZM1737.983,24.989 L1736.249,24.989 L1736.249,26.714 L1737.983,26.714 L1737.983,24.989 ZM1751.418,21.536 L1749.683,21.536 L1749.683,26.714 L1751.418,26.714 L1751.418,21.536 ZM1758.059,24.989 L1756.324,24.989 L1756.324,26.714 L1758.059,26.714 L1758.059,24.989 ZM1877.785,23.818 L1871.129,23.818 L1871.156,23.791 L1877.759,23.791 L1877.785,23.818 ZM1367.778,33.211 L1371.871,29.132 L1375.975,33.211 L1367.778,33.211 ZM469.871,23.818 L463.214,23.818 L463.241,23.791 L469.844,23.791 L469.871,23.818 Z"/></svg>');
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-position: bottom;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920px" height="39px"><path d="M1877.759,23.791 L1874.461,20.504 L1879.969,15.027 L1868.965,15.027 L1874.461,20.504 L1871.156,23.791 L1789.442,23.791 L1784.749,28.484 L1775.502,37.704 L1769.337,31.559 L1738.089,31.695 L1733.080,31.695 L1720.422,19.079 L1686.790,19.079 L1679.552,26.293 L1386.290,26.255 L1380.520,20.508 L1371.871,29.132 L1368.980,26.255 L1203.819,26.293 L1191.058,38.996 L1167.007,15.027 L1167.000,15.038 L1166.989,15.027 L1157.936,24.049 L1154.094,24.049 L1151.994,21.956 L1155.330,18.643 L1148.674,18.643 L1151.994,21.956 L1149.933,24.007 L1072.000,24.040 L1072.000,24.049 L1061.000,24.044 L1050.000,24.049 L1050.000,24.040 L972.067,24.007 L970.005,21.956 L973.326,18.643 L966.670,18.643 L970.005,21.956 L967.906,24.049 L964.064,24.049 L955.012,15.027 L955.000,15.038 L954.993,15.027 L930.942,38.996 L918.181,26.293 L818.020,26.255 L815.129,29.132 L806.480,20.508 L800.710,26.255 L661.448,26.293 L654.209,19.079 L620.578,19.079 L607.919,31.695 L602.910,31.695 L571.663,31.559 L565.497,37.704 L556.251,28.484 L551.557,23.791 L469.844,23.791 L466.539,20.504 L472.035,15.027 L461.031,15.027 L466.539,20.504 L463.241,23.791 L204.638,23.791 L195.467,15.027 L195.449,15.049 L195.426,15.027 L179.458,31.695 L166.537,31.695 L158.884,24.049 L0.001,24.049 L0.001,-0.012 L1919.998,-0.012 L1919.998,24.049 L1877.759,23.791 ZM228.624,15.027 L226.889,15.027 L226.889,20.205 L228.624,20.205 L228.624,15.027 ZM231.248,15.027 L229.518,15.027 L229.518,20.205 L231.248,20.205 L231.248,15.027 ZM243.370,15.027 L241.640,15.027 L241.640,20.205 L243.370,20.205 L243.370,15.027 ZM264.168,15.027 L258.973,15.027 L258.973,20.205 L264.168,20.205 L264.168,15.027 ZM584.675,24.989 L582.941,24.989 L582.941,26.714 L584.675,26.714 L584.675,24.989 ZM591.316,21.536 L589.582,21.536 L589.582,26.714 L591.316,26.714 L591.316,21.536 ZM604.751,21.536 L603.017,21.536 L603.017,23.260 L604.751,23.260 L604.751,21.536 ZM604.751,24.989 L603.017,24.989 L603.017,26.714 L604.751,26.714 L604.751,24.989 ZM1737.983,21.536 L1736.249,21.536 L1736.249,23.260 L1737.983,23.260 L1737.983,21.536 ZM1737.983,24.989 L1736.249,24.989 L1736.249,26.714 L1737.983,26.714 L1737.983,24.989 ZM1751.418,21.536 L1749.683,21.536 L1749.683,26.714 L1751.418,26.714 L1751.418,21.536 ZM1758.059,24.989 L1756.324,24.989 L1756.324,26.714 L1758.059,26.714 L1758.059,24.989 ZM1877.785,23.818 L1871.129,23.818 L1871.156,23.791 L1877.759,23.791 L1877.785,23.818 ZM1367.778,33.211 L1371.871,29.132 L1375.975,33.211 L1367.778,33.211 ZM469.871,23.818 L463.214,23.818 L463.241,23.791 L469.844,23.791 L469.871,23.818 Z"/></svg>');
+    mask-repeat: repeat-x;
+    mask-position: bottom;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+}
+
+.cyber-button {
+    --button-border: 4px;
+    --button-font-size: 1.4rem;
+    --button-padding-v: 0.9rem;
+    --button-padding-h: 2.5rem;
+
+    --button-cutout: 1.1rem;
+
+    --button-shadow-primary: #00F0FF;
+    --button-shadow-secondary: #FCEE09;
+    --button-shimmy-distance: 5;
+
+    --button-clip-1: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+    --button-clip-2: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+    --button-clip-3: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+    --button-clip-4: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+    --button-clip-5: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+    --button-clip-6: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+    --button-clip-7: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+
+    --button-clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 80% 90%, 80% 100%, var(--button-cutout) 100%, 0 calc(100% - var(--button-cutout)));
+
+    cursor: pointer;
+    background: transparent !important;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: var(--button-padding-v) var(--button-padding-h);
+    outline: transparent;
+    position: relative;
+    border: 0;
+    transition: all, 0.2s;
+}
+
+.cyber-button:hover {
+    filter: brightness(90%);
+}
+
+.cyber-button:after,
+.cyber-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: var(--button-clip);
+    z-index: -1;
+}
+
+.cyber-button .glitchtext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FCEE09;
+    text-shadow: 2px 2px, -2px -2px;
+    clip-path: var(--button-clip);
+    animation: glitch 4s infinite;
+    padding: var(--button-padding-v) var(--button-padding-h);
+    display: none;
+}
+
+.cyber-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: var(--button-clip);
+    z-index: -1;
+    background-color: #FCEE09;
+
+}
+
+.cyber-button:before {
+    background: #00F0FF;
+    transform: translate(var(--button-border), 0);
+}
+
+.cyber-button .glitchtext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FCEE09;
+    text-shadow: 2px 2px #00F0FF, -2px -2px #FCEE09;
+    clip-path: var(--button-clip);
+    animation: glitch 4s infinite;
+    padding: var(--button-padding-v) var(--button-padding-h);
+    display: none;
+}
+
+.cyber-button:hover .glitchtext {
+    display: block;
+}
+
+.cyber-button .glitchtext:before {
+    content: '';
+    position: absolute;
+    top: calc(var(--button-border) * 1);
+    right: calc(var(--button-border) * 1);
+    bottom: calc(var(--button-border) * 1);
+    left: calc(var(--button-border) * 1);
+    clip-path: var(--button-clip);
+    background-color: #FCEE09;
+    z-index: -1;
+}
+
+
+
+.cyber-tile-big {
+    --tile-width: 360px;
+    --tile-padding: 4px;
+    --tile-edges: 20px;
+    --og-clip-path: polygon(0 0, 0 calc(100% - var(--tile-edges)), var(--tile-edges) 100%, 100% 100%, 100% var(--tile-edges), calc(100% - var(--tile-edges)) 0);
+    min-height: 1000px;
+    clip-path: var(--og-clip-path);
+    padding: var(--tile-padding);
+    padding-bottom: var(--tile-edges);
+    color: #fafafa;
+    background-color: #050A0E;
+}
+
+.cyber-tile-big img {
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% var(--tile-edges), calc(100% - var(--tile-edges)) 0);
+
+}
+
+.cyber-tile-big label {
+    display: block;
+    margin: var(--label-margins) var(--label-margins) 0 var(--label-margins);
+}
+
+.cyber-tile-big img~label {
+    margin-top: 0;
+
+}
+
+.cyber-tile-big {
+    --tile-width: 480px;
+    --tile-edges: 26px;
+
+}
+
+
+h1.cyberpunk,
+.cyberpunk h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    font-weight: 200;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2.cyberpunk,
+.cyberpunk h2 {
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+    font-weight: 300;
+}
+
+h3.cyberpunk,
+.cyberpunk h3 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+}
+
+h4.cyberpunk,
+.cyberpunk h4 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+}
+
+h1.cyberpunk:before,
+h2.cyberpunk:before,
+h3.cyberpunk:before,
+h4.cyberpunk:before,
+.cyberpunk h1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 2px;
+    width: 100%;
+    height: 10px;
+    background-color: #050A0E;
+    clip-path: polygon(0px 0px, 85px 0px, 90px 5px, 100% 5px, 100% 6px, 85px 6px, 80px 10px, 0px 10px);
+
+}
+
+h1.cyberpunk.glitched,
+.cyberpunk h1.glitched {
+    animation-name: h1glitched;
+    animation-duration: calc(var(--glitched-duration) * 1.4);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+h1.cyberpunk.glitched:before,
+.cyberpunk h1.glitched:before {
+    animation-name: h1beforeglitched;
+    animation-duration: calc(var(--glitched-duration) * 2);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+h1.cyberpunk:after,
+p.cyberpunk:after,
+.cyberpunk h1:after,
+.cyberpunk p:after {
+    content: "_";
+    animation-name: hxafter;
+    animation-duration: var(--glitched-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+p.cyberpunk,
+.cyberpunk p {
+    border: 30px solid #050A0E;
+    border-right: 5px solid #050A0E;
+    border-left: 5px solid #050A0E;
+    border-bottom: 24px solid #050A0E;
+    padding: 5px;
+    clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+    background-color: #FCEE09;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+p.cyberpunk.inverse,
+.cyberpunk p.inverse {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 40px 15px 30px;
+    margin: 0 2rem 5rem auto;
+    clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+    background-color: #050A0E;
+    color: #FCEE09;
+    border-right: 3px solid #050A0E;
+}
+
+p.cyberpunk:before,
+.cyberpunk p:before {
+    content: "P-14";
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    right: 25px;
+    padding: 2px 2px 0px 2px;
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+    color: #050A0E;
+    background-color: #FCEE09;
+    border-left: 2px solid #050A0E;
+}
+
+p.cyberpunk.inverse:before,
+.cyberpunk p.inverse:before {
+    content: "T-71";
+    right: 90px;
+    bottom: 9px;
+}
+
+section.cyberpunk.black p.cyberpunk.inverse:before,
+section.cyberpunk.black p.cyberpunk:before,
+section.cyberpunk.black p.inverse:before,
+section.cyberpunk.black p:before {
+    background-color: #050A0E;
+    color: #FCEE09;
+}
+
+p.cyberpunk:hover:before,
+.cyberpunk p:hover:before {
+    animation-name: buttonhoverafter;
+    animation-duration: var(--glitched-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+p.cyberpunk.scannedh,
+p.cyberpunk.scannedv,
+.cyberpunk p.scannedh,
+.cyberpunk p.scannedv {
+    position: relative;
+}
+
+p.cyberpunk.scannedh:after,
+.cyberpunk p.scannedh:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0, 240, 255, .5);
+    box-shadow: 0px 0px 10px 4px #050A0E;
+    animation-name: scannedh;
+    animation-duration: var(--glitched-long-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.inner nav ul {
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inner nav ul li a {
+    font-family: 'Oxanium';
+}
+
+main h1 {
+    width: 50%;
+    margin-bottom: 100px;
+    font-family: 'Oxanium';
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #050A0E;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    font-family: "neontubes";
+    font-size: 20rem;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 9;
+
+}
+
+.logo span {
+    display: block;
+    position: relative;
+    transform: translateZ(0) translate3D(0, 0, 0);
+    backface-visibility: hidden;
+    will-change: opacity;
+}
+
+.logo .open {
+    transform: rotate(-1deg);
+    color: #ffd9e2;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px rgba(255, 0, 60, .5), 0 0 40px rgba(255, 0, 60, 1), 0 0 100px rgba(255, 0, 60, 1), 0 0 200px rgba(255, 0, 60, 1), 0 0 300px rgba(255, 0, 60, 1), 0 0 500px rgba(255, 0, 60, 1), 0 0 1000px rgba(255, 0, 60, 1);
+    animation: blink 4s infinite alternate;
+    font-size: 12rem;
+    font-family: 'Cyberpunk';
+}
+
+.logo .hrs {
+    transform: rotate(1deg);
+    font-size: 5rem;
+    color: #d4eaff;
+    text-shadow: 0 0 0 transparent, 0 0 10px #2695ff, 0 0 20px rgba(38, 149, 255, .5), 0 0 40px rgba(38, 149, 255, 1), 0 0 100px rgba(38, 149, 255, 1), 0 0 200px rgba(38, 149, 255, 1), 0 0 300px rgba(38, 149, 255, 1), 0 0 500px rgba(38, 149, 255, 1);
+    animation: buzz 0.01s infinite alternate;
+    font-family: 'Cyberpunk';
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 1300px;
+    text-align: center;
+    background: #050A0E;
+    position: relative;
+}
+
+#wrapper .cities {
+    position: absolute;
+    z-index: 10;
+}
+
+#wrapper .cities p {
+    cursor: pointer;
+    text-align: left;
+    padding: 20px 40px 0px 40px;
+}
+
+#wrapper .cities #Toronto {
+    color: #fcc738;
+}
+
+#wrapper .cities #Sydney {
+    color: #f29;
+}
+
+#wrapper .inner-container {
+    padding-top: 200px;
+}
+
+#wrapper .inner-container figure {
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+#wrapper .inner-container figure .stripes-wrapper {
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 200px;
+}
+
+#wrapper .inner-container figure .stripes-wrapper .stripe {
+    width: 100%;
+    height: 12px;
+}
+
+#wrapper .inner-container figure .stripes-wrapper .stripe:nth-of-type(n+10)+.stripe {
+    margin-top: 12px;
+}
+
+#wrapper .inner-container figure #svg-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: -30%;
+    z-index: 10;
+}
+
+
+.animate__flash {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.car {
+    width: 25%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: -30%;
+    animation: car_move 8s infinite;
+    z-index: 9;
+}
+
+
+
+#stream {
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 0px;
+    animation: streamline 1.5s linear infinite;
+}
+
+
+
+#rim-pattern {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: spin 0.7s linear infinite;
+}
+
+
+
+#group-body {
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+
+
+#streak {
+    animation: streak 1s linear infinite;
+}
+
+
+.profile_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.profile_wrap img {
+    width: 80%;
+    opacity: 70%;
+}
+
+.profile_wrap p {
+    margin-right: 50px;
+    text-align: center;
+}
+
+.profile_wrap span {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: 'Oxanium';
+}
+
+.profile_wrap i {
+    width: 30%;
+    font-size: 8rem;
+    margin: 0 1rem 1rem auto;
+}
+
+.project-inner {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.project-inner iframe {
+    width: 100%;
+    padding: 1rem;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    background-color: black;
+    position: relative;
+}
+
+.panel h3 {
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-family: 'Oxanium';
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel:hover {
+    flex: 5;
+}
+
+.panel:hover h3 {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.video {
+    position: absolute;
+    top: 50px;
+    display: block;
+    height: 80%;
+    padding-top: 2;
+}
+
+
+
+
+#contact {
+    width: 100%;
+    height: 100%;
+}
+
+#contact h1 {
+    width: 50%;
+    font-family: 'Oxanium';
+}
+
+
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px auto 200px auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+#contact input::placeholder {
+    color: #FCEE09;
+}
+
+#contact textarea::placeholder {
+    color: #FCEE09;
+}
+
+#contact input:focus::placeholder {
+    color: transparent;
+}
+
+#contact textarea:focus::placeholder {
+    color: transparent;
+}
+
+.form-horizontal {
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.form-control,
+textarea {
+    max-width: 400px;
+    background-color: #050A0E;
+    color: #FCEE09;
+    letter-spacing: 1px;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -32px, 0px);
+}
+
+.direct-contact-container {
+    max-width: 400px;
+}
+
+
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.list-item {
+    line-height: 4;
+    color: #050A0E;
+}
+
+.contact-text {
+    font: 300 18px 'Oxanium';
+    letter-spacing: 1.9px;
+    color: #050A0E;
+}
+
+
+.place {
+    margin-left: 62px;
+}
+
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+
+.contact-text a {
+    color: #050A0E;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    font-family: 'Oxanium';
+}
+
+.contact-text a:hover {
+    color: #050A0E;
+    text-decoration: none;
+}
+
+
+.social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media-list li a {
+    color: #050A0E;
+}
+
+.social-media-list li {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #050A0E;
+    background-color: rgb(27, 27, 27);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+    background-color: #fff;
+}
+
+.social-media-list li:hover i {
+    color: #050A0E;
+}
+
+.social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list i {
+    color: #FCEE09;
+}
+
+.social-media-list li:hover a {
+    color: #050A0E;
+}
+
+.copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #050A0E;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+hr {
+    border-color: #050A0E;
+}
+
+
+
+p.cyberpunk.scannedv:after,
+.cyberpunk p.scannedv:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    height: calc(100% + 55px);
+    width: 3px;
+    background-color: #050A0E;
+    box-shadow: 0px 0px 10px 4px #050A0E;
+    animation-name: scannedv;
+    animation-duration: calc(var(--glitched-long-duration) * 3);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
+.gotop {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+}
+
+.gotop span {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: fall linear infinite;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #050A0E;
+}
