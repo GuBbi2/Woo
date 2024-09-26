@@ -764,6 +764,53 @@ main h1 {
     padding: 1rem;
 }
 
+
+.swiper {
+    width: 90%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper {
+    position: relative;
+}
+
+
+.mySwiper .swiper-button-next {
+    right: 0;
+    color: #FCEE09;
+}
+
+.mySwiper .swiper-button-prev {
+    left: 0;
+    color: #FCEE09;
+}
+
+.mySwiper .swiper-pagination-bullet{
+    background-color: #FCEE09;
+
+}
+
+.cyber-tile-big p{
+    position: absolute;
+    top: 2%;
+    font-size: 3rem;
+    font-family: 'Oxanium';
+}
 .panel {
     background-size: auto 100%;
     background-position: center;
@@ -1058,18 +1105,9 @@ p.cyberpunk.scannedv:after,
     transform: rotate(45deg);
 }
 
-.rain {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.5);
-    animation: fall linear infinite;
-}
-
 footer {
     width: 100%;
     height: 100px;
     background-color: #050A0E;
 }
+
