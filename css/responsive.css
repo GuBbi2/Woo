@@ -126,6 +126,7 @@
     .swiper-slide{
         flex-direction: column;
     }
+
     .direct-contact-container,
     .form-wrapper {
         float: none;
@@ -137,11 +138,7 @@
         width: 100%;
     }
 
-    .send-button{
-        position: absolute;
-        width: 100%;
-        left: 0;
-    }
+    
 
     .name,
     .email,
@@ -207,7 +204,18 @@
     .inner nav ul{
         margin: 0;
     }
-
+    .send-button{
+        position: absolute;
+        width: 80%;
+        left: 12%;
+    }
+    .alt-send-button{
+        width: 100%;
+    
+        position: absolute;
+        top: 5px;
+        left: 0;
+    }
 }
 
 
