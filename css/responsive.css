@@ -122,7 +122,10 @@
 
 
 @media screen and (max-width: 569px) {
-
+    
+    .swiper-slide{
+        flex-direction: column;
+    }
     .direct-contact-container,
     .form-wrapper {
         float: none;
